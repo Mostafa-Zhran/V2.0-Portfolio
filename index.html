@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mostafa Zahran - Computer Science Student & Full Stack .NET Developer. View my portfolio, projects, and skills.">
+    <meta name="keywords" content="Mostafa Zahran, Full Stack Developer, .NET Developer, Computer Science, Portfolio">
+    <meta name="author" content="Mostafa Zahran">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-domain.com/">
+    <meta property="og:title" content="Mostafa Zahran - Full Stack Developer">
+    <meta property="og:description" content="Computer Science Student & Full Stack .NET Developer passionate about creating innovative solutions.">
+    <meta property="og:image" content="https://your-domain.com/Image/Profile.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://your-domain.com/">
+    <meta property="twitter:title" content="Mostafa Zahran - Full Stack Developer">
+    <meta property="twitter:description" content="Computer Science Student & Full Stack .NET Developer passionate about creating innovative solutions.">
+    <meta property="twitter:image" content="https://your-domain.com/Image/Profile.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <title>Mostafa Zahran - Full Stack Developer</title>
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Libraries -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide@latest/font/lucide.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="icons.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    
+    <!-- Critical CSS for above-the-fold content -->
+    <style>
+        /* Critical styles for hero section and navigation */
+        .hero {
+            background: linear-gradient(135deg, #2563eb, #10b981);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Mostafa Zahran</a>
+            
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars icon" aria-hidden="true"></i>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#home"><i class="fas fa-home icon icon-sm"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about"><i class="fas fa-user icon icon-sm"></i> About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education"><i class="fas fa-graduation-cap icon icon-sm"></i> Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills"><i class="fas fa-code icon icon-sm"></i> Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience"><i class="fas fa-briefcase icon icon-sm"></i> Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects"><i class="fas fa-project-diagram icon icon-sm"></i> Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact"><i class="fas fa-envelope icon icon-sm"></i> Contact</a></li>
+                    <li class="nav-item ms-2">
+                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                            <i class="fas fa-moon theme-icon" aria-hidden="true"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <!-- Animated Background Shapes -->
+        <div class="hero-shape hero-shape-1"></div>
+        <div class="hero-shape hero-shape-2"></div>
+        <div class="hero-shape hero-shape-3"></div>
+        
+        <div class="container h-100">
+            <div class="row align-items-center h-100">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <div class="hero-content">
+                        <h1 class="display-3 fw-bold mb-2">Mostafa Zahran</h1>
+                        <div class="d-flex align-items-center justify-content-center gap-3 mb-4">
+                            <span class="badge bg-white text-primary px-4 py-2 fw-normal">
+                                <i class="fas fa-code me-2"></i>Full Stack Developer
+                            </span>
+                        </div>
+                        <p class="lead mb-4 px-lg-5">
+                            I craft exceptional digital experiences with clean, efficient code. 
+                            Currently pursuing Computer Science and mastering Full Stack .NET development.
+                        </p>
+                        <div class="hero-buttons d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
+                            <a href="#contact" class="btn btn-primary btn-hire">
+                                <i class="fas fa-paper-plane me-2"></i>Hire Me
+                            </a>
+                            <a href="#" class="btn btn-outline-light btn-cv" id="downloadCv">
+                                <i class="fas fa-file-download me-2"></i>Download CV
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Profile Photo Column -->
+                <div class="col-lg-6 d-none d-lg-flex justify-content-center align-items-center">
+                    <div class="profile-photo-wrapper">
+                        <div class="profile-photo">
+                            <!-- Add your photo here -->
+                            <img src="your-photo.jpg" alt="Mostafa Zahran" class="img-fluid">
+                        </div>
+                        <div class="profile-photo-highlight"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Down Indicator -->
+        <div class="scroll-down">
+            <a href="#about" class="text-white text-decoration-none">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <span class="d-block mt-2">Scroll Down</span>
+                <i class="fas fa-chevron-down mt-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section bg-light">
+        <div class="container">
+            <!-- Section Title -->
+            <div class="text-center mb-5">
+                <h2 class="section-title position-relative d-inline-block">About Me</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="row g-5">
+                <!-- Left Column - Professional Summary -->
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <div class="text-center mb-4">
+                            <div class="section-title-icon mb-2">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <h3>Professional Summary</h3>
+                        </div>
+                        
+                        <div class="about-point text-center mb-4">
+                            <div class="about-icon-wrapper">
+                                <i class="fas fa-graduation-cap text-primary"></i>
+                            </div>
+                            <div class="about-text">
+                                <p class="mb-0">I'm a passionate <strong>Computer Science student</strong> at Arish University with a strong focus on full-stack development and problem-solving.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="about-point text-center mb-4">
+                            <div class="about-icon-wrapper">
+                                <i class="fas fa-laptop-code text-primary"></i>
+                            </div>
+                            <div class="about-text">
+                                <p class="mb-0">As a <strong>Full-Stack Developer</strong>, I specialize in building responsive and scalable web applications using the latest technologies and best practices.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="about-point text-center mb-4">
+                            <div class="about-icon-wrapper">
+                                <i class="fas fa-cogs text-primary"></i>
+                            </div>
+                            <div class="about-text">
+                                <p class="mb-0">With expertise in <strong>C#, ASP.NET Core, SQL Server, and modern web technologies</strong>, I create efficient, maintainable, and user-friendly solutions to complex problems.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-5 text-center">
+                            <a href="#contact" class="btn btn-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m22 2-7 20-4-9-9-4Z"/>
+                                    <path d="M22 2 11 13"/>
+                                </svg>
+                                <span>Get In Touch</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Quick Stats -->
+                <div class="col-lg-6">
+                    <div class="row g-4">
+                        <!-- Stats Cards -->
+                        <div class="col-md-6">
+                            <div class="stat-card bg-white p-4 rounded-3 h-100 text-center shadow-sm transition-all hover:shadow-md hover:transform hover:-translate-y-1">
+                                <div class="stat-icon mb-3">
+                                    <i class="fas fa-code fa-2x text-primary"></i>
+                                </div>
+                                <h3 class="stat-number mb-2">250+</h3>
+                                <p class="stat-text mb-0">Problems Solved</p>
+                                <div class="stat-underline"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="stat-card bg-white p-4 rounded-3 h-100 text-center shadow-sm transition-all hover:shadow-md hover:transform hover:-translate-y-1">
+                                <div class="stat-icon mb-3">
+                                    <i class="fas fa-laptop-code fa-2x text-primary"></i>
+                                </div>
+                                <h3 class="stat-number mb-2">10+</h3>
+                                <p class="stat-text mb-0">Technologies</p>
+                                <div class="stat-underline"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="stat-card bg-white p-4 rounded-3 h-100 text-center shadow-sm transition-all hover:shadow-md hover:transform hover:-translate-y-1">
+                                <div class="stat-icon mb-3">
+                                    <i class="fas fa-award fa-2x text-primary"></i>
+                                </div>
+                                <h3 class="stat-number mb-2">5+</h3>
+                                <p class="stat-text mb-0">Certifications</p>
+                                <div class="stat-underline"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="stat-card bg-white p-4 rounded-3 h-100 text-center shadow-sm transition-all hover:shadow-md hover:transform hover:-translate-y-1">
+                                <div class="stat-icon mb-3">
+                                    <i class="fas fa-folder-open fa-2x text-primary"></i>
+                                </div>
+                                <h3 class="stat-number mb-2">15+</h3>
+                                <p class="stat-text mb-0">Projects</p>
+                                <div class="stat-underline"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education & Skills -->
+            <div class="row g-5 mt-4">
+                <!-- Education Timeline -->
+                <div class="col-lg-6">
+                    <div class="education-timeline">
+                        <h3 class="mb-4">Education & Training</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <h5>B.Sc. in Computer Science</h5>
+                                    <p class="text-muted mb-1">Arish University</p>
+                                    <small class="text-muted">2021 - Present</small>
+                                    <p class="mb-0">Specializing in Software Engineering and Web Development</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <h5>Full Stack .NET Track</h5>
+                                    <p class="text-muted mb-1">Digital Egypt Pioneers</p>
+                                    <small class="text-muted">2023 - 2024</small>
+                                    <p class="mb-0">Comprehensive training in full-stack development with .NET ecosystem</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="col-lg-6">
+                    <div class="skills-section">
+                        <h3 class="mb-4">Technical Skills</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-html5"></i>
+                                </div>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-css3-alt"></i>
+                                </div>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-js"></i>
+                                </div>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <span>C#</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <span>SQL Server</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-docker"></i>
+                                </div>
+                                <span>Docker</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-git-alt"></i>
+                                </div>
+                                <span>Git</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-bootstrap"></i>
+                                </div>
+                                <span>Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Achievements -->
+            <div class="achievements-section mt-5">
+                <h3 class="text-center mb-5">Achievements & Awards</h3>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="achievement-card p-4 rounded-3 h-100">
+                            <div class="achievement-icon mb-3">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <h5>Codeforces Expert</h5>
+                            <p class="mb-0">Achieved Expert rank with 1600+ rating, placing in top 10% of competitive programmers</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="achievement-card p-4 rounded-3 h-100">
+                            <div class="achievement-icon mb-3">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <h5>Academic Excellence</h5>
+                            <p class="mb-0">Maintained a GPA of 3.8/4.0, consistently ranking in the top 5% of my class</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="achievement-card p-4 rounded-3 h-100">
+                            <div class="achievement-icon mb-3">
+                                <i class="fas fa-code-branch"></i>
+                            </div>
+                            <h5>Open Source Contributor</h5>
+                            <p class="mb-0">Active contributor to open-source projects with 100+ commits and 5+ repositories</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="section-title">Certifications</h2>
+                    <p class="section-subtitle">Professional certifications and training programs that validate my expertise</p>
+                </div>
+            </div>
+
+            <div class="certificate-grid">
+                <!-- Certificate 1 -->
+                <div class="certificate-card" data-type="development">
+                    <div class="certificate-header">
+                        <div class="certificate-icon-wrapper">
+                            <i data-lucide="laptop" class="certificate-icon"></i>
+                        </div>
+                        <span class="certificate-badge">Verified</span>
+                    </div>
+                    <div class="certificate-body">
+                        <h3 class="certificate-title">Full Stack .NET Developer</h3>
+                        <div class="certificate-issuer">
+                            <i data-lucide="award" style="width: 16px; height: 16px;"></i>
+                            <span>Digital Egypt Pioneers</span>
+                        </div>
+                        <p class="certificate-date">
+                            <i data-lucide="calendar" style="width: 14px; height: 14px;"></i>
+                            <span>Issued: June 2024</span>
+                        </p>
+                        <p class="certificate-description">Comprehensive training in full-stack development with .NET Core, C#, and modern web technologies including Entity Framework, ASP.NET Core, and frontend frameworks.</p>
+                        <div class="certificate-footer">
+                            <a href="#" class="btn-certificate">View Credentials <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificate 2 -->
+                <div class="certificate-card" data-type="database">
+                    <div class="certificate-header">
+                        <div class="certificate-icon-wrapper">
+                            <i data-lucide="database" class="certificate-icon"></i>
+                        </div>
+                        <span class="certificate-badge">Verified</span>
+                    </div>
+                    <div class="certificate-body">
+                        <h3 class="certificate-title">SQL Server Mastery</h3>
+                        <div class="certificate-issuer">
+                            <i data-lucide="award" style="width: 16px; height: 16px;"></i>
+                            <span>Microsoft Learn</span>
+                        </div>
+                        <p class="certificate-date">
+                            <i data-lucide="calendar" style="width: 14px; height: 14px;"></i>
+                            <span>Issued: April 2024</span>
+                        </p>
+                        <p class="certificate-description">Advanced database design, query optimization, T-SQL programming, and performance tuning for enterprise applications and data-driven solutions.</p>
+                        <div class="certificate-footer">
+                            <a href="#" class="btn-certificate">View Credentials <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificate 3 -->
+                <div class="certificate-card" data-type="web">
+                    <div class="certificate-header">
+                        <div class="certificate-icon-wrapper">
+                            <i data-lucide="code-2" class="certificate-icon"></i>
+                        </div>
+                        <span class="certificate-badge">Verified</span>
+                    </div>
+                    <div class="certificate-body">
+                        <h3 class="certificate-title">Modern JavaScript</h3>
+                        <div class="certificate-issuer">
+                            <i data-lucide="award" style="width: 16px; height: 16px;"></i>
+                            <span>Udemy</span>
+                        </div>
+                        <p class="certificate-date">
+                            <i data-lucide="calendar" style="width: 14px; height: 14px;"></i>
+                            <span>Issued: February 2024</span>
+                        </p>
+                        <p class="certificate-description">Mastering ES6+ features, async/await, modern JavaScript frameworks (React, Vue), build tools, and best practices for scalable applications.</p>
+                        <div class="certificate-footer">
+                            <a href="#" class="btn-certificate">View Credentials <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificate 4 -->
+                <div class="certificate-card" data-type="cloud">
+                    <div class="certificate-header">
+                        <div class="certificate-icon-wrapper">
+                            <i data-lucide="cloud" class="certificate-icon"></i>
+                        </div>
+                        <span class="certificate-badge in-progress">In Progress</span>
+                    </div>
+                    <div class="certificate-body">
+                        <h3 class="certificate-title">AWS Solutions Architect</h3>
+                        <div class="certificate-issuer">
+                            <i data-lucide="award" style="width: 16px; height: 16px;"></i>
+                            <span>Amazon Web Services</span>
+                        </div>
+                        <p class="certificate-date">
+                            <i data-lucide="calendar" style="width: 14px; height: 14px;"></i>
+                            <span>Expected: December 2024</span>
+                        </p>
+                        <p class="certificate-description">Designing and deploying scalable, highly available, and fault-tolerant systems on AWS cloud infrastructure and services.</p>
+                        <div class="certificate-footer">
+                            <a href="#" class="btn-certificate">Learn More <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="section-title">Technical Skills</h2>
+                    <p class="text-muted">Technologies and tools I work with to bring ideas to life.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h4>Backend Development</h4>
+                        <div class="skill-tags mt-3">
+                            <span class="skill-tag">C#</span>
+                            <span class="skill-tag">ASP.NET Core</span>
+                            <span class="skill-tag">Entity Framework</span>
+                            <span class="skill-tag">SQL Server</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h4>Frontend Development</h4>
+                        <div class="skill-tags mt-3">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h4>Tools & Others</h4>
+                        <div class="skill-tags mt-3">
+                            <span class="skill-tag">Git & GitHub</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Problem Solving</span>
+                            <span class="skill-tag">Algorithms</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="text-muted">A showcase of my recent work and technical capabilities.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i data-lucide="globe-2"></i>
+                        </div>
+                        <div class="p-4">
+                            <h5>Personal Portfolio</h5>
+                            <p class="text-muted mb-3">A responsive portfolio website showcasing my skills, projects, and experience built with modern web technologies.</p>
+                            <div class="mb-3">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Bootstrap</span>
+                            </div>
+                            <div class="project-actions mt-3">
+                                <a href="#" class="btn btn-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                    </svg>
+                                    Live Demo
+                                </a>
+                                <a href="#" class="btn btn-outline-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.483 2 12.014c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.153-1.11-1.46-1.11-1.46-.907-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.833.091-.647.35-1.089.636-1.34-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.27.098-2.647 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.502.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.7 1.028 1.595 1.028 2.688 0 3.847-2.339 4.695-4.566 4.944.36.31.678.922.678 1.857 0 1.34-.012 2.421-.012 2.75 0 .268.18.579.688.481A10.015 10.015 0 0022 12.014C22 6.483 17.523 2 12 2z" clip-rule="evenodd" />
+                                    </svg>
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i data-lucide="shopping-cart"></i>
+                        </div>
+                        <div class="p-4">
+                            <h5>E-Commerce Platform</h5>
+                            <p class="text-muted mb-3">Full-featured e-commerce application with product management, shopping cart, and secure checkout system.</p>
+                            <div class="mb-3">
+                                <span class="tech-tag">ASP.NET Core</span>
+                                <span class="tech-tag">C#</span>
+                                <span class="tech-tag">SQL Server</span>
+                                <span class="tech-tag">Bootstrap</span>
+                            </div>
+                            <div class="project-actions mt-3">
+                                <a href="#" class="btn btn-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                    </svg>
+                                    Live Demo
+                                </a>
+                                <a href="#" class="btn btn-outline-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.483 2 12.014c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.153-1.11-1.46-1.11-1.46-.907-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.833.091-.647.35-1.089.636-1.34-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.27.098-2.647 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.502.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.7 1.028 1.595 1.028 2.688 0 3.847-2.339 4.695-4.566 4.944.36.31.678.922.678 1.857 0 1.34-.012 2.421-.012 2.75 0 .268.18.579.688.481A10.015 10.015 0 0022 12.014C22 6.483 17.523 2 12 2z" clip-rule="evenodd" />
+                                    </svg>
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i data-lucide="list-checks"></i>
+                        </div>
+                        <div class="p-4">
+                            <h5>Task Management App</h5>
+                            <p class="text-muted mb-3">A productivity application for managing tasks and projects with user authentication and real-time updates.</p>
+                            <div class="mb-3">
+                                <span class="tech-tag">ASP.NET Core</span>
+                                <span class="tech-tag">Entity Framework</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">CSS3</span>
+                            </div>
+                            <div class="project-actions mt-3">
+                                <a href="#" class="btn btn-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                    </svg>
+                                    Live Demo
+                                </a>
+                                <a href="#" class="btn btn-outline-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.483 2 12.014c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.153-1.11-1.46-1.11-1.46-.907-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.833.091-.647.35-1.089.636-1.34-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.27.098-2.647 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.502.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.7 1.028 1.595 1.028 2.688 0 3.847-2.339 4.695-4.566 4.944.36.31.678.922.678 1.857 0 1.34-.012 2.421-.012 2.75 0 .268.18.579.688.481A10.015 10.015 0 0022 12.014C22 6.483 17.523 2 12 2z" clip-rule="evenodd" />
+                                    </svg>
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section">
+        <div class="container contact-container">
+            <div class="contact-header text-center">
+                <h2 class="section-title">Get In Touch</h2>
+                <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions. Let's connect and create something amazing together!</p>
+            </div>
+
+            <div class="contact-cards">
+                <!-- Email -->
+                <div class="contact-card">
+                    <div class="contact-icon-wrapper">
+                        <i data-lucide="mail"></i>
+                    </div>
+                    <h3>Email Me</h3>
+                    <p>For any inquiries or just to say hello</p>
+                    <a href="mailto:mostafazahran724@gmail.com" class="contact-link" aria-label="Send email to mostafazahran724@gmail.com">
+                        Write Me
+                    </a>
+                </div>
+                
+                <!-- LinkedIn -->
+                <div class="contact-card">
+                    <div class="contact-icon-wrapper">
+                        <i data-lucide="linkedin"></i>
+                    </div>
+                    <h3>LinkedIn</h3>
+                    <p>Let's connect professionally</p>
+                    <a href="https://www.linkedin.com/in/mostafa-tamer-zahran/" target="_blank" class="contact-link" rel="noopener noreferrer">
+                        Connect
+                    </a>
+                </div>
+                
+                <!-- GitHub -->
+                <div class="contact-card">
+                    <div class="contact-icon-wrapper">
+                        <i data-lucide="github"></i>
+                    </div>
+                    <h3>GitHub</h3>
+                    <p>Explore my open-source projects</p>
+                    <a href="https://github.com/Mostafa-Zhran" target="_blank" class="contact-link" rel="noopener noreferrer">
+                        View Work
+                    </a>
+                </div>
+                
+                <!-- Codeforces -->
+                <div class="contact-card">
+                    <div class="contact-icon-wrapper">
+                        <i data-lucide="code-2"></i>
+                    </div>
+                    <h3>Codeforces</h3>
+                    <p>Check my competitive programming</p>
+                    <a href="https://codeforces.com/profile/mostafazahran724" target="_blank" class="contact-link" rel="noopener noreferrer">
+                        View Profile
+                    </a>
+                </div>
+                
+                <!-- Codewars -->
+                <div class="contact-card">
+                    <div class="contact-icon-wrapper">
+                        <i data-lucide="sword"></i>
+                    </div>
+                    <h3>Codewars</h3>
+                    <p>See my coding challenges</p>
+                    <a href="https://www.codewars.com/users/Mostafa_Zahran" target="_blank" class="contact-link" rel="noopener noreferrer">
+                        View Profile
+                    </a>
+                </div>
+                
+                <!-- Facebook -->
+                <div class="contact-card">
+                    <div class="contact-icon-wrapper">
+                        <i data-lucide="facebook"></i>
+                    </div>
+                    <h3>Facebook</h3>
+                    <p>Connect with me socially</p>
+                    <a href="https://www.facebook.com/mostafa.tamer.7773" target="_blank" class="contact-link" rel="noopener noreferrer">
+                        Let's Chat
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-about">
+                            <h3 class="footer-logo">Mostafa Zahran</h3>
+                            <p class="mt-3">Full Stack Developer passionate about creating beautiful and functional web
+                                applications. Let's build something amazing together!</p>
+                            <div class="footer-social mt-4">
+                                <a href="https://github.com/Mostafa-Zhran" target="_blank" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/mostafa-tamer-zahran/" target="_blank"
+                                    aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://codeforces.com/profile/mostafazahran724" target="_blank"
+                                    aria-label="Codeforces">
+                                    <i class="fas fa-code"></i>
+                                </a>
+                                <a href="https://www.codewars.com/users/Mostafa%20Zahran" target="_blank"
+                                    aria-label="Codewars">
+                                    <i class="fas fa-laptop-code"></i>
+                                </a>
+                                <a href="https://www.facebook.com/mostafa.zaharn" target="_blank"
+                                    aria-label="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <h4 class="footer-title">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="#home"><i class="fas fa-chevron-right me-2"></i>Home</a></li>
+                            <li><a href="#about"><i class="fas fa-chevron-right me-2"></i>About</a></li>
+                            <li><a href="#skills"><i class="fas fa-chevron-right me-2"></i>Skills</a></li>
+                            <li><a href="#projects"><i class="fas fa-chevron-right me-2"></i>Projects</a></li>
+                            <li><a href="#certifications"><i class="fas fa-chevron-right me-2"></i>Certifications</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="footer-title">My Skills</h4>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-code me-2"></i>Web Development</a></li>
+                            <li><a href="#"><i class="fas fa-mobile-alt me-2"></i>Responsive Design</a></li>
+                            <li><a href="#"><i class="fab fa-microsoft me-2"></i>.NET Development</a></li>
+                            <li><a href="#"><i class="fas fa-database me-2"></i>Database Design</a></li>
+                            <li><a href="#"><i class="fas fa-robot me-2"></i>Problem Solving</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="footer-title">Contact Info</h4>
+                        <ul class="footer-contact">
+                            <li><i class="fas fa-envelope me-3"></i>mostafazahran724@gmail.com</li>
+                            <li><i class="fas fa-map-marker-alt me-3"></i>Egypt</li>
+                            <li class="mt-4">
+                                <a href="#contact" class="btn btn-outline-light">
+                                    <i class="fas fa-paper-plane me-2"></i>Send Message
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="mb-0">&copy; 2025 Mostafa Zahran. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                        <div class="footer-legal-links">
+                            <a href="#" class="me-3">Privacy Policy</a>
+                            <a href="#" class="me-3">Terms of Service</a>
+                            <a href="#">Sitemap</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
