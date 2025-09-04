@@ -217,6 +217,28 @@ i[data-lucide] {
     color: #f9fafb;
 }
 
+/* Project Image Styling */
+.project-card .project-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-card .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
 .project-card p {
     color: #6b7280;
     margin-bottom: 1.5rem;
@@ -500,6 +522,7 @@ button:hover i[data-lucide] {
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
     --gradient-accent: linear-gradient(135deg, var(--primary) 0%, #7c3aed 100%);
+    --hero-bg-gradient: linear-gradient(135deg, #10b981, #2563eb);
     
     /* Card Styles */
     --card-bg: #ffffff;
@@ -3444,9 +3467,9 @@ background: var(--card-bg, #fff) !important;
 }
 
 .certificate-badge.in-progress {
-    background: rgba(245, 158, 11, 0.15);
-    color: #f59e0b;
-    border-color: rgba(245, 158, 11, 0.3);
+    background: rgba(84, 206, 147, 0.15);
+    color: #e7ebe8dd;
+    border-color: rgba(34, 197, 94, 0.3);
 }
 
 .certificate-badge::before {
@@ -4224,20 +4247,22 @@ background: var(--card-bg, #fff) !important;
 }
 
 /* Certificate type specific styles */
+/* Development - Blue */
 .certificate-card[data-type="development"] .certificate-header {
-    background: linear-gradient(135deg, #00b2fe 0%, #0088cc 100%);
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
 }
 
 .certificate-card[data-type="development"] .certificate-issuer,
 .certificate-card[data-type="development"] .certificate-date i,
 .certificate-card[data-type="development"] .btn-certificate {
-    color: #00b2fe;
+    color: #3b82f6;
 }
 
 .certificate-card[data-type="development"] .btn-certificate::before {
-    background: linear-gradient(135deg, #00b2fe 0%, #0088cc 100%);
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
 }
 
+/* Database - Purple */
 .certificate-card[data-type="database"] .certificate-header {
     background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
 }
@@ -4252,20 +4277,22 @@ background: var(--card-bg, #fff) !important;
     background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
 }
 
+/* Web - Orange */
 .certificate-card[data-type="web"] .certificate-header {
-    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
 }
 
 .certificate-card[data-type="web"] .certificate-issuer,
 .certificate-card[data-type="web"] .certificate-date i,
 .certificate-card[data-type="web"] .btn-certificate {
-    color: #f59e0b;
+    color: #f97316;
 }
 
 .certificate-card[data-type="web"] .btn-certificate::before {
-    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
 }
 
+/* Cloud - Green */
 .certificate-card[data-type="cloud"] .certificate-header {
     background: linear-gradient(135deg, #10b981 0%, #059669 100%);
 }
@@ -4278,6 +4305,36 @@ background: var(--card-bg, #fff) !important;
 
 .certificate-card[data-type="cloud"] .btn-certificate::before {
     background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+/* AI & Machine Learning - Red */
+.certificate-card[data-type="ai-ml"] .certificate-header {
+    background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+}
+
+.certificate-card[data-type="ai-ml"] .certificate-issuer,
+.certificate-card[data-type="ai-ml"] .certificate-date i,
+.certificate-card[data-type="ai-ml"] .btn-certificate {
+    color: #ef4444;
+}
+
+.certificate-card[data-type="ai-ml"] .btn-certificate::before {
+    background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+}
+
+/* Soft Skills - Teal */
+.certificate-card[data-type="soft-skills"] .certificate-header {
+    background: linear-gradient(135deg, #06b6d4 0%, #0e7490 100%);
+}
+
+.certificate-card[data-type="soft-skills"] .certificate-issuer,
+.certificate-card[data-type="soft-skills"] .certificate-date i,
+.certificate-card[data-type="soft-skills"] .btn-certificate {
+    color: #06b6d4;
+}
+
+.certificate-card[data-type="soft-skills"] .btn-certificate::before {
+    background: linear-gradient(135deg, #06b6d4 0%, #0e7490 100%);
 }
 
 /* Add subtle pattern overlay to headers */

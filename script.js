@@ -318,7 +318,6 @@ function handleFormSubmit(e) {
     e.preventDefault();
     
     const form = e.target;
-    const formData = new FormData(form);
     let isValid = true;
     
     // Validate all required fields
@@ -332,34 +331,61 @@ function handleFormSubmit(e) {
         return;
     }
     
-    // Simulate form submission
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalText = submitBtn.innerHTML;
-    
+
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
     submitBtn.disabled = true;
-    
-    // Simulate API call
-    setTimeout(() => {
-        showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
-        form.reset();
-        form.querySelectorAll('.form-control').forEach(field => {
-            field.classList.remove('is-valid');
-        });
-        
+
+    // Collect form data
+    const formData = new FormData(form);
+
+    // Send data to Formspree
+    fetch("https://formspree.io/f/movnplzn", {
+        method: "POST",
+        body: formData,
+        headers: { "Accept": "application/json" }
+    })
+    .then(response => {
+        if (response.ok) {
+            showNotification("Message sent successfully! I'll get back to you soon.", "success");
+            form.reset();
+            form.querySelectorAll('.form-control').forEach(field => {
+                field.classList.remove('is-valid');
+            });
+        } else {
+            throw new Error('Network response was not ok');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        showNotification("Failed to send message. Please try again.", "danger");
+    })
+    .finally(() => {
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
-    }, 2000);
+    });
 }
 
 // Notification system
 function showNotification(message, type = 'info') {
+    // Remove any existing notifications first
+    const existingNotifications = document.querySelectorAll('.alert.position-fixed');
+    existingNotifications.forEach(notification => {
+        notification.remove();
+    });
+    
     const notification = document.createElement('div');
     notification.className = `alert alert-${type} alert-dismissible fade show position-fixed`;
-    notification.style.cssText = 'top: 100px; right: 20px; z-index: 9999; min-width: 300px;';
+    notification.style.cssText = 'top: 20px; right: 20px; z-index: 9999; min-width: 300px;';
+    notification.setAttribute('role', 'alert');
+    
     notification.innerHTML = `
-        ${message}
-        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <div class="d-flex align-items-center">
+            <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'} me-2"></i>
+            <div>${message}</div>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     `;
     
     document.body.appendChild(notification);
@@ -367,7 +393,12 @@ function showNotification(message, type = 'info') {
     // Auto-remove after 5 seconds
     setTimeout(() => {
         if (notification.parentNode) {
-            notification.remove();
+            notification.classList.remove('show');
+            notification.addEventListener('transitionend', () => {
+                if (notification.parentNode) {
+                    notification.remove();
+                }
+            }, { once: true });
         }
     }, 5000);
 }
