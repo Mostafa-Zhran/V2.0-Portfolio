@@ -3860,13 +3860,19 @@ background: var(--card-bg, #fff) !important;
     right: -5px;
     bottom: -5px;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    background: linear-gradient(45deg, #0382e4, #00aeffe9, #7959c2);
+    background: linear-gradient(45deg, #00a2ff, #38f8b8, #048b62);
     background-size: 100% 100%;
     z-index: 1;
     opacity: 0.7;
     filter: blur(20px);
     animation: gradientBG 10s ease infinite, morph 8s ease-in-out infinite;
     animation-delay: 0.5s;
+    transition: all 0.5s ease;
+}
+
+[data-theme="dark"] .profile-photo-highlight {
+    background: linear-gradient(45deg, #8a2be2, #5f27cd, #1e90ff);
+    opacity: 0.5;
 }
 
 
