@@ -1,4 +1,345 @@
 /* =====================
+   Projects Carousel & Modal
+   ===================== */
+/* Carousel Container */
+.projects-carousel-container {
+    position: relative;
+    padding: 0 3rem;
+    margin: 2rem 0;
+}
+
+/* Carousel */
+.projects-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    padding: 1rem 0;
+    gap: 1.5rem;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.projects-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* Project Slide */
+.project-slide {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 400px;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
+}
+
+/* Carousel Navigation Arrows */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.carousel-arrow:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-arrow-prev {
+    left: 0;
+}
+
+.carousel-arrow-next {
+    right: 0;
+}
+
+.carousel-arrow-icon {
+    width: 24px;
+    height: 24px;
+    stroke-width: 2;
+}
+
+/* Project Card Hover Effect */
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Certificates Carousel */
+.certificates-carousel-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.certificates-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    padding: 20px 0;
+    gap: 25px;
+}
+
+.certificates-carousel::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
+.certificate-slide {
+    flex: 0 0 auto;
+    width: 350px;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
+}
+
+.certificate-slide:hover {
+    transform: translateY(-5px);
+}
+
+/* Project Modal */
+.project-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1050;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-modal.show {
+    display: flex;
+    opacity: 1;
+}
+
+.project-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.project-modal-dialog {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+    z-index: 2;
+}
+
+.project-modal.show .project-modal-dialog {
+    transform: scale(1);
+}
+
+.project-modal-content {
+    position: relative;
+    padding: 2rem;
+}
+
+.project-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    z-index: 3;
+}
+
+.project-modal-close:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.close-icon {
+    width: 24px;
+    height: 24px;
+    stroke: #333;
+    stroke-width: 2;
+}
+
+.project-modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.modal-project-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.modal-project-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.modal-project-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.modal-project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.modal-project-links a {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.modal-project-links a i {
+    margin-right: 0.5rem;
+}
+
+.modal-project-links .btn-demo {
+    background: var(--primary);
+    color: white;
+}
+
+.modal-project-links .btn-code {
+    background: #f3f4f6;
+    color: #333;
+}
+
+.modal-project-links .btn-demo:hover {
+    background: #4f46e5;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.3);
+}
+
+.modal-project-links .btn-code:hover {
+    background: #e5e7eb;
+    transform: translateY(-2px);
+}
+
+.modal-project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+}
+
+.modal-tech-tag {
+    background: #f0f9ff;
+    color: #0369a1;
+    padding: 0.35rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .projects-carousel-container {
+        padding: 0 1.5rem;
+    }
+    
+    .carousel-arrow {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .project-slide {
+        max-width: 320px;
+    }
+    
+    .project-modal-dialog {
+        max-width: 95%;
+        margin: 1rem;
+    }
+    
+    .modal-project-links {
+        flex-direction: column;
+    }
+    
+    .modal-project-links a {
+        justify-content: center;
+    }
+}
+
+/* Dark Mode Support */
+[data-theme="dark"] .project-modal-dialog {
+    background: #1e293b;
+    color: #e2e8f0;
+}
+
+[data-theme="dark"] .modal-project-title,
+[data-theme="dark"] .modal-project-description {
+    color: #e2e8f0;
+}
+
+[data-theme="dark"] .modal-project-links .btn-code {
+    background: #334155;
+    color: #e2e8f0;
+}
+
+[data-theme="dark"] .modal-project-links .btn-code:hover {
+    background: #475569;
+}
+
+[data-theme="dark"] .modal-tech-tag {
+    background: rgba(56, 189, 248, 0.1);
+    color: #7dd3fc;
+}
+
+/* =====================
    Icons
    ===================== */
 /* Base icon styles */
@@ -3975,12 +4316,50 @@ background: var(--card-bg, #fff) !important;
     border-color: #6b7280;
 }
 
+/* Button Loading Animation */
+@keyframes buttonLoading {
+    0% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.btn-loading {
+    position: relative;
+    color: transparent !important;
+    pointer-events: none;
+}
+
+.btn-loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -10px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: buttonSpin 0.8s linear infinite;
+}
+
+@keyframes buttonSpin {
+    to { transform: rotate(360deg); }
+}
+
 /* Live Demo Button (Primary) */
+.project-actions {
+    width: 100%;
+}
+
 .project-actions .btn-primary {
     background: linear-gradient(135deg, #6366f1, #4f46e5);
     color: white;
     position: relative;
     overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .project-actions .btn-primary::before {
