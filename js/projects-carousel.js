@@ -3,34 +3,35 @@ document.addEventListener('DOMContentLoaded', function() {
     const projectsData = {
         1: {
             title: "Personal Portfolio V2.0",
-            description: "A responsive portfolio website showcasing my skills, projects, and experience built with modern web technologies. This is the second iteration of my portfolio with improved design, performance, and user experience.",
-            image: "Images/projects/Screenshot 2025-09-04 142544.png",
-            techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+            description: "A responsive portfolio website showcasing my skills, projects, Certificates, Experience and Contact built with modern web technologies. This is the second iteration of my portfolio with improved design, performance, and user experience.",
+            image: "Images/projects/V2.0.png",
+            techStack: ["HTML5", "CSS3", "Java Script", "Bootstrap"],
             demoUrl: "https://mostafa-zahran.netlify.app",
             codeUrl: "https://github.com/Mostafa-Zhran/V2.0-Portfolio"
         },
         2: {
-            title: "Personal Portfolio V1.0",
-            description: "The first version of my personal portfolio website. Built to showcase my projects and skills, this was my first major web development project. It features a clean, responsive design and was a great learning experience in frontend development.",
-            image: "Images/projects/Screenshot 2025-08-03 154346.png",
-            techStack: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
-            demoUrl: "https://mostafazahran.netlify.app/",
-            codeUrl: "https://github.com/Mostafa-Zhran/Portfolio"
+            title: "Sales Management Desktop App",
+            description: "A desktop-based system designed to manage products, categories, customers, sales, and orders efficiently. With features like inventory tracking, detailed sales and customer management, the app simplifies daily operations and helps businesses stay organized. Its user-friendly interface makes it easy to navigate between products, groups, sales, and orders , ensuring smooth workflow and better decision-making.",
+            image: "Images/projects/Sales App.png",
+            techStack: ["C#", "Windows Form",".Net Core", "SQL Server", "ADO.net", "Dapper"],
+            codeUrl: "https://github.com/Mostafa-Zhran/Sales-Management-System-Desktop-app.git"
         },
         3: {
-            title: "Project Title",
-            description: "A brief description of the project. Explain what the project does, its purpose, and any key features. Keep it concise but informative.",
-            image: "Images/projects/project-image.png",
-            techStack: ["Technology 1", "Technology 2", "Technology 3"],
-            demoUrl: "https://example.com/demo",
-            codeUrl: "https://github.com/username/repository"
+            title: "Breast Cancer Prediction System",
+            description: "Our Breast Cancer Prediction System uses validated machine-learning models to analyze clinical and imaging data and provide clear risk scores and explanations to support early detection and care decisions. It’s designed as a clinical decision-support tool — not a replacement for professional diagnosis and screening.",
+            image: "Images/projects/Cancer detection.png",
+            techStack: ["Flask", "Python", "4ML Algorithms" ,"HTML5","CSS3", "Java Script"],
+            demoUrl: "https://breast-cancer-predection.netlify.app",
+            codeUrl: "https://github.com/Mostafa-Zhran/ML-Project-Deployment.git"
         },
         4: {
-            title: "Coming Soon",
-            description: "I'm currently working on some exciting new projects that I can't wait to share with you! Stay tuned for updates on my latest work, which will include more complex applications and innovative solutions to real-world problems.",
-            image: "Images/projects/Screenshot 2025-08-28 153626.png",
-            techStack: ["Coming Soon"]
-        }
+            title: "Personal Portfolio V1.0",
+            description: "A clean and modern portfolio showcasing my projects, skills, and achievements. Designed with simplicity and usability in mind, it highlights my work in a professional way while offering an easy and engaging experience for visitors",
+            image: "Images/projects/V1.0.png",
+            techStack: ["HTML5", "CSS3", "Java Script", "Bootstrap"],
+            demoUrl: "https://mostafazahran.netlify.app/",
+            codeUrl: "https://github.com/Mostafa-Zhran/My_Protofolio"  
+          }
     };
 
     // DOM Elements

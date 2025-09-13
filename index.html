@@ -59,14 +59,14 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="icons.css">
-    <link rel="stylesheet" href="contact.css">
-    <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/icons.css">
+    <link rel="stylesheet" href="CSS/contact.css">
+    <link rel="stylesheet" href="CSS/about.css">
+    <link rel="stylesheet" href="CSS/style.css">
 
     <!-- Preload critical resources -->
-    <link rel="preload" href="style.css" as="style">
-    <link rel="preload" href="script.js" as="script">
+    <link rel="preload" href="CSS/style.css" as="style">
+    <link rel="preload" href="JS/script.js" as="script">
 
     <!-- Critical CSS for above-the-fold content -->
     <style>
@@ -109,7 +109,7 @@
                             About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#Education"><i
                                 class="fas fa-graduation-cap icon icon-sm"></i> Education</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#Certificate"><i
+                    <li class="nav-item"><a class="nav-link" href="#certificates"><i
                                 class="fas fa-briefcase icon icon-sm"></i> Certifications</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills"><i class="fas fa-code icon icon-sm"></i>
                             Skills</a></li>
@@ -416,6 +416,12 @@
                                 </div>
                                 <span>ADO.Net</span>
                             </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-database"></i>
+                                </div>
+                                <span>Dapper</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -441,6 +447,7 @@
                             </div>
                             <h5>Academic Excellence</h5>
                             <!-- <p class="mb-0">Maintained a GPA of 3.8/4.0, consistently ranking in the top 5% of my class</p> -->
+                             <p>Dedicated to high standards in learning, research, and innovation , empowering individuals to excel and make a meaningful impact. </p>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -449,7 +456,7 @@
                                 <i class="fas fa-code-branch"></i>
                             </div>
                             <h5>Open Source Contributor</h5>
-                            <p class="mb-0">Active contributor to open-source projects with 80+ commits and 13+
+                            <p class="mb-0">Active contributor to open-source projects with 110+ commits and 14+
                                 repositories</p>
                         </div>
                     </div>
@@ -518,7 +525,7 @@
                                 <h3 class="certificate-title">Machine Learning Track</h3>
                                 <div class="certificate-issuer">
                                     <i data-lucide="award" style="width: 16px; height: 16px;"></i>
-                                    <span>NTI</span>
+                                    <span> NTI </span>
                                 </div>
                                 <p class="certificate-date">
                                     <i data-lucide="calendar" style="width: 14px; height: 14px;"></i>
@@ -528,7 +535,7 @@
                                     supervised and unsupervised learning, model evaluation, and deployment for real-world
                                     machine learning applications.</p>
                                 <div class="certificate-footer">
-                                    <a href="#" class="btn-certificate">View Credentials <i data-lucide="arrow-right"
+                                    <a href="https://drive.google.com/file/d/1CVeAXYSYDNoZr3A_h1EU2mVGLbY_gVmP/view?usp=sharing" class="btn-certificate" target="_blank">View Credentials <i data-lucide="arrow-right"
                                             style="width: 16px; height: 16px;"></i></a>
                                 </div>
                             </div>
@@ -577,8 +584,8 @@
                             </div>
                             <div class="certificate-body">
                                 <h3 class="certificate-title">Soft Skills & CV Writing</h3>
-                                <div class="certificate-issuer">
-                                    <i data-lucide="award" style="width: 16px; height: 16px;"></i>
+                                <div class="certificate-issuer" style="white-space: nowrap;">
+                                    <i data-lucide="award" style="width: 16px; height: 16px; display: inline-block;"></i>
                                     <span>ITIDA & Arish University</span>
                                 </div>
                                 <p class="certificate-date">
@@ -625,8 +632,9 @@
                             <span class="skill-tag">C#</span>
                             <span class="skill-tag">ASP.NET Core</span>
                             <span class="skill-tag">Entity Framework</span>
-                            <span class="skill-tag">ADO.net</span>
                             <span class="skill-tag">SQL Server</span>
+                            <span class="skill-tag">ADO.net</span>
+                            <span class="skill-tag">Dapper</span>
                         </div>
                     </div>
                 </div>
@@ -679,18 +687,17 @@
                 <button class="carousel-arrow carousel-arrow-prev" aria-label="Previous project">
                     <i data-lucide="chevron-left" class="carousel-arrow-icon"></i>
                 </button>
-                
+                <!---Project 1-->
                 <div class="projects-carousel">
                     <div class="project-slide" data-project-id="1">
                         <div class="project-card">
                             <div class="project-image">
-                                <img src="Images/projects/Screenshot 2025-09-04 142544.png" alt="Personal Website V2.0"
+                                <img src="Images/projects/V2.0.png" alt="Personal Website V2.0"
                                     class="img-fluid rounded">
                             </div>
                             <div class="p-4">
                                 <h5>Personal Portfolio V2.0</h5>
-                                <p class="text-muted mb-3">A responsive portfolio website showcasing my skills, projects,
-                                    and experience built with modern web technologies.</p>
+                                <p class="text-muted mb-3">An upgraded portfolio with a refined design, smoother navigation, and enhanced project showcases. This version highlights my growth, new skills, and recent work while delivering a more professional and interactive experience for visitors.</p>
                                 <div class="mb-3">
                                     <span class="tech-tag">HTML5</span>
                                     <span class="tech-tag">CSS3</span>
@@ -706,22 +713,23 @@
                             </div>
                         </div>
                     </div>
-                    
+                    <!---Project 2-->
                     <div class="project-slide" data-project-id="2">
                         <div class="project-card">
                             <div class="project-image">
-                                <img src="Images/projects/Screenshot 2025-08-03 154346.png" alt="Personal Website V1.0"
+                                <img src="Images/projects/Sales App.png" alt="Sales Management Desktop app"
                                     class="img-fluid rounded">
                             </div>
                             <div class="p-4">
-                                <h5>Personal Portfolio V1.0</h5>
-                                <p class="text-muted mb-3">A responsive portfolio website showcasing my skills, projects,
-                                    and experience built with modern web technologies.</p>
+                                <h5>Sales Management Desktop App</h5>
+                                <p class="text-muted mb-3">Simplify your sales process with an all-in-one desktop solution to track customers, manage inventory, and generate reports with ease.</p>
                                 <div class="mb-3">
-                                    <span class="tech-tag">HTML5</span>
-                                    <span class="tech-tag">CSS3</span>
-                                    <span class="tech-tag">JavaScript</span>
-                                    <span class="tech-tag">Bootstrap</span>
+                                    <span class="tech-tag">C#</span>
+                                    <span class="tech-tag">Windows Form</span>
+                                    <span class="tech-tag">.Net core</span>
+                                    <span class="tech-tag">SQL Server</span>
+                                    <span class="tech-tag">ADO.net</span>
+                                    <span class="tech-tag">Dapper</span>
                                 </div>
                                 <div class="project-actions mt-3">
                                     <button class="btn btn-primary view-project-details" data-project-id="2">
@@ -732,20 +740,23 @@
                             </div>
                         </div>
                     </div>
-                    
+                    <!---Project 3-->
                     <div class="project-slide" data-project-id="3">
                         <div class="project-card">
                             <div class="project-image">
-                                <img src="Images/projects/project-image.png" alt="Project Title"
+                                <img src="Images/projects/Cancer detection.png" alt="Project Title"
                                     class="img-fluid rounded">
                             </div>
                             <div class="p-4">
-                                <h5>Project Title</h5>
-                                <p class="text-muted mb-3">A brief description of the project. Explain what the project does and its purpose.</p>
+                                <h5> Breast Cancer Prediction System</h5>
+                                <p class="text-muted mb-3">An intelligent tool that leverages machine learning to analyze medical data and provide early risk predictions, helping support timely diagnosis and better patient outcomes.</p>
                                 <div class="mb-3">
-                                    <span class="tech-tag">Tech 1</span>
-                                    <span class="tech-tag">Tech 2</span>
-                                    <span class="tech-tag">Tech 3</span>
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Flask</span>
+                                    <span class="tech-tag">HTML</span>
+                                    <span class="tech-tag">CSS</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">4ML Algorithms </span>
                                 </div>
                                 <div class="project-actions mt-3">
                                     <button class="btn btn-primary view-project-details" data-project-id="3">
@@ -756,18 +767,21 @@
                             </div>
                         </div>
                     </div>
-                    
+                    <!--Project 4-->
                     <div class="project-slide" data-project-id="4">
                         <div class="project-card">
                             <div class="project-image">
-                                <img src="Images/projects/Screenshot 2025-08-28 153626.png" alt="Coming Soon"
+                                <img src="Images/projects/V1.0.png" alt="Coming Soon"
                                     class="img-fluid rounded">
                             </div>
                             <div class="p-4">
-                                <h5>Coming Soon</h5>
-                                <p class="text-muted mb-3">Stay tuned for my upcoming projects and exciting new developments in my portfolio.</p>
+                                <h5>Personal Portfolio V1.0</h5>
+                                <p class="text-muted mb-3">A clean and modern portfolio showcasing my projects, skills, and achievements. Designed with simplicity and usability in mind, it highlights my work in a professional way while offering an easy and engaging experience for visitors.</p>
                                 <div class="mb-3">
-                                    <span class="tech-tag">Coming Soon</span>
+                                    <span class="tech-tag">HTML5</span>
+                                    <span class="tech-tag">CSS3</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">Bootstrap</span>
                                 </div>
                                 <div class="project-actions mt-3">
                                     <button class="btn btn-primary view-project-details" data-project-id="4">
@@ -982,8 +996,8 @@
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js" defer></script>
-    <script src="js/projects-carousel.js" defer></script>
+    <script src="JS/script.js" defer></script>
+    <script src="JS/projects-carousel.js" defer></script>
 </body>
 
 </html>
