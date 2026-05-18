@@ -64,7 +64,7 @@ export function Hero() {
           </motion.a>
 
           <motion.a
-            href="https://drive.google.com/file/d/1cvbja0XzkvCln5t5FHX6pAkIti64Q067/view?usp=drive_link"
+            href="https://drive.google.com/file/d/19d23YXlQVDZ_TvJMGYu_xuQYeF5TrtaV/view?usp=sharing"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="w-full sm:w-auto px-8 py-4 glass-card text-white font-semibold rounded-full hover:bg-white/[0.08] hover:shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-all duration-300 flex items-center justify-center gap-2 group border border-white/10 relative overflow-hidden"

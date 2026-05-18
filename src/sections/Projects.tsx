@@ -33,13 +33,12 @@ export function Projects() {
                 className="bento-card group glow-effect grid grid-cols-1 lg:grid-cols-12 gap-0 overflow-hidden"
               >
                 {/* Project Image Area */}
-                <div className={`lg:col-span-7 relative h-64 lg:h-[400px] overflow-hidden ${i % 2 !== 0 ? 'lg:order-2' : ''}`}>
+                <div className={`lg:col-span-7 relative h-64 lg:h-[400px] overflow-hidden bg-white/[0.02] flex items-center justify-center p-8 ${i % 2 !== 0 ? 'lg:order-2' : ''}`}>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10 lg:hidden" />
-                  <div className="absolute inset-0 bg-saas-blue/10 group-hover:bg-transparent transition-colors z-10 mix-blend-overlay" />
                   <img 
                     src={project.img} 
                     alt={project.title} 
-                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]"
+                    className="max-w-full max-h-full object-contain rounded-xl shadow-2xl group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] relative z-20 m-auto"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       target.src = `https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop`;
